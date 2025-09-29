@@ -1,15 +1,13 @@
 import express from "express";
-import roteadorUser from "./routes/Users/Routers/Router.js";
-import roteadorBooks from "./routes/Books/Routers/Router.js";
+import roteadorUser from "./routes/UserRouter.js";
+import roteadorBooks from "./routes/BooksRouter.js";
 
-const api = express();
+const app = express();
 const PORT = 3000;
 
-api.use(express.json());
+app.use(express.json());
 
-api.use("/users", roteadorUser);
-api.use("/books", roteadorBooks);
-
-api.listen(PORT, () => {
-    console.log(`🚀 Servidor rodando na porta ${PORT}`);
-});
+// Rotas
+app.use("/auth", roteadorUser);
+app.use("/books", roteadorBooks);
+app.l
