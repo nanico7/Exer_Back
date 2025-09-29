@@ -3,8 +3,6 @@ import { registarUsuario } from "../Controllers/UserController.js";
 
 const roteadorUser = Router();
 
-roteadorUser.post("/register", (req, res) => {
-    registarUsuario(req, res)
-})
+roteadorUser.post("/register", registarUsuario);
 
 export default roteadorUser;

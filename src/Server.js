@@ -6,8 +6,9 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-
-// Rotas
 app.use("/auth", roteadorUser);
 app.use("/books", roteadorBooks);
-app.l
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
+
