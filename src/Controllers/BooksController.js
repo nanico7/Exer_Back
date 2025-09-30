@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-// Função genérica para tratamento de erros
+
 const tratarErro = (res, status = 400, mensagem = "Erro desconhecido") => {
   return res.status(status).json({ mensagem });
 };

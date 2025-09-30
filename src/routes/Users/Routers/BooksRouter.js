@@ -13,10 +13,10 @@ import { verificarAdmin } from "../../../middlewares/adminMiddleware.js";
 
 const roteadorBooks = Router();
 
-// Middleware global de autenticação
+
 roteadorBooks.use(auth);
 
-// Rotas de livros
+
 roteadorBooks.get("/", pegarTodosLivros);
 roteadorBooks.get("/:id", pegarLivroId);
 
