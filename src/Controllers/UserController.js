@@ -15,13 +15,13 @@ async function registarUsuario(req, res) {
       .json({ mensagem: "A senha deve ter no mínimo 4 caracteres" });
   }
 
-  const novoUser = { username, password };
+  const novoUser = { username: username, password: password };
 
   try {
     const criar = await prisma.user.create({
       data: novoUser,
     });
-
+console.log(criar);
     return res.status(201).json(criar);
   } catch (err) {
     console.log(err);
