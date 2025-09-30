@@ -1,6 +1,6 @@
 import express from "express";
-import roteadorUser from "./routes/UserRouter.js";
-import roteadorBooks from "./routes/BooksRouter.js";
+import roteadorUser from "./routes/Users/Routers/UserRouter.js";
+import roteadorBooks from "./routes/Users/Routers/BooksRouter.js";
 
 const app = express();
 const PORT = 3000;

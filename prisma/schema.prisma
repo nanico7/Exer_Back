@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./Biblioteca-atividade.db"
+  url      = "file:./meu_banco.db"
 }
 
 model User {

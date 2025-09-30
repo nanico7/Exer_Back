@@ -5,7 +5,6 @@ const prisma = new PrismaClient();
 async function registarUsuario(req, res) {
   const { username, password } = req.body;
 
-  // Validação básica
   if (!username || !password) {
     return res.status(400).json({ mensagem: "Está faltando informação!" });
   }

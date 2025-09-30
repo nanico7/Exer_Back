@@ -7,9 +7,9 @@ import {
   pegarEmprestado,
   devolverLivro,
   atualizarLivro
-} from "../Controllers/BooksController.js";
-import { token as auth } from "../middlewares/auth.js";
-import { verificarAdmin } from "../middlewares/adminMiddleware.js";
+} from "../../../Controllers/BooksController.js";
+import { token as auth } from "../../../middlewares/auth.js";
+import { verificarAdmin } from "../../../middlewares/adminMiddleware.js";
 
 const roteadorBooks = Router();
 
